@@ -1,0 +1,15 @@
+.bg-yellow{
+  background-color: rgb(246, 196, 33);
+}
+
+.border-brown{
+  border: 3px solid brown;
+}
+
+.bg-steel{
+  background-color: rgb(123, 155, 182);
+}
+
+.border-yellow{
+  border: 2px dashed rgb(246, 196, 33);
+}

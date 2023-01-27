@@ -9,8 +9,100 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.min.css" integrity="sha512-fXnjLwoVZ01NUqS/7G5kAnhXNXat6v7e3M9PhoMHOTARUMCaf5qNO84r5x9AFf5HDzm3rEZD8sb/n6dZ19SzFA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
   <title>Clicker Title</title>
+  
 </head>
-<body>
+<!-- <style>
+  body.debug .container,
+  body.debug .container-fluid {
+    outline: 2px double blue;
+    outline-offset: -2px;
+  }
+
+  body.debug .row {
+    outline: 2px dashed red;
+    outline-offset: -2px;
+  }
+
+  body.debug [class*="col-"] {
+    outline: 2px dotted forestgreen;
+    outline-offset: -3px;
+  }
+</style> -->
+<body class="debug">
+
+  <header>
+    <div class="container-fluid">
+      <div class="row bg-yellow border-brown">
+        <div class="col-3 border-brown">
+          <p>Manual Mine</p>
+          <p>Auto Mine</p>
+        </div>
+        <div class="col-3 border-brown">
+          <p>resources:</p>
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <div class="col-3 border-brown">
+              <p class="mdi fs-3 mdi-account"> X 3</p>
+              <p class="mdi fs-3 mdi-account"> X 3</p>
+            </div>
+            <div class="col-3 border-brown">
+              <p class="mdi fs-3 mdi-account"> X 3</p>
+              <p class="mdi fs-3 mdi-account"> X 3</p>
+            </div>
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-4 bg-dark">
+          <img class="img-fluid" src="Hand-drawn-Moon-phases-infographic-isolated-on-transparent-background-PNG.png">
+        </div>
+        <div class="col-4 bg-steel border-brown">
+          <p>click upgrades</p>
+          <div class="row">
+            <div class="col-4">iton</div>
+            <div class="col-4">name price</div>
+            <div class="col-4">what does</div>
+          </div>
+          <div class="row d-flex align-items-center border-yellow">
+            <div class="col-4 text-center">iton</div>
+            <div class="col-4">name price</div>
+            <div class="col-4">what does some more text for testing purposes</div>
+          </div>
+        </div>
+        <div class="col-4 bg-steel border-brown">
+          <p>Auto upgrades</p>
+          <div class="row">
+            <div class="col-4">iton</div>
+            <div class="col-4">name price</div>
+            <div class="col-4">what does</div>
+          </div>
+          <div class="row">
+            <div class="col-4">iton</div>
+            <div class="col-4">name price</div>
+            <div class="col-4">what does</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="text-center">Made by ACME and Tom & Jerry LLC</h3>
+        </div>
+      </div>
+    </div>
+  </footer>
   
 
   <script src="app.js"></script>
