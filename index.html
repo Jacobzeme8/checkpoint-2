@@ -34,21 +34,21 @@
     <div class="container-fluid">
       <div class="row bg-yellow border-brown">
         <div class="col-3 border-brown">
-          <p class="fs-3" >Manual Mine: 7</p>
-          <p class="fs-3" >Auto Mine: 4</p>
+          <p class="fs-3" >Manual Mine: <span id="manual-mine"></span></p>
+          <p class="fs-3" >Auto Mine: <span id="auto-mine"></span> /3s</p>
         </div>
         <div class="col-3 border-brown">
-          <p class="fs-3">Cheesey Bits: 775</p>
+          <p class="fs-3">Cheesey Bits: <span id="cheese"></span></p>
         </div>
         <div class="col-6">
-          <div class="row">
+          <div id= "upgrade-row" class="row">
             <div class="col-3 border-brown">
-              <p class="mdi fs-3 mdi-account"> X 3</p>
-              <p class="mdi fs-3 mdi-account"> X 3</p>
+              <p class="mdi fs-3 mdi-pickaxe"></p>
+              <p class="mdi fs-3 mdi-shovel"></p>
             </div>
             <div class="col-3 border-brown">
-              <p class="mdi fs-3 mdi-account"> X 3</p>
-              <p class="mdi fs-3 mdi-account"> X 3</p>
+              <p class="mdi fs-3 mdi-rodent"></p>
+              <p class="mdi fs-3 mdi-robot-happy"></p>
             </div>
             <div class="col-3"></div>
             <div class="col-3"></div>
@@ -62,32 +62,18 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-4 bg-dark">
-          <img class="img-fluid" src="Hand-drawn-Moon-phases-infographic-isolated-on-transparent-background-PNG.png">
+          <img class="img-fluid moon" onclick="moonClick()" src="Hand-drawn-Moon-phases-infographic-isolated-on-transparent-background-PNG.png">
         </div>
         <div class="col-4 bg-steel border-brown">
           <p>Click Mining upgrades</p>
-          <div class="row">
-            <div class="col-4">iton</div>
-            <div class="col-4">name price</div>
-            <div class="col-4">what does</div>
-          </div>
-          <div class="row d-flex align-items-center p-3 bg-dark-steel border-yellow">
-            <div class="col-4 text-center"><span class="mdi mdi-pickaxe fs-3"><span class="fs-5">Pickaxe</span></span></div>
-            <div class="col-4 text-center">Cheese:30</div>
-            <div class="col-4">+5 per Click</div>
+          <div id="manual-upgrades">
+            
           </div>
         </div>
         <div class="col-4 bg-steel border-brown">
           <p>Automagic Mining upgrades</p>
-          <div class="row">
-            <div class="col-4">iton</div>
-            <div class="col-4">name price</div>
-            <div class="col-4">what does</div>
-          </div>
-          <div class="row">
-            <div class="col-4">iton</div>
-            <div class="col-4">name price</div>
-            <div class="col-4">what does</div>
+          <div id = "auto-upgrades">
+
           </div>
         </div>
       </div>

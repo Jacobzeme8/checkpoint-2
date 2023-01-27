@@ -17,3 +17,15 @@
 .bg-dark-steel{
   background-color: rgb(65, 100, 128);
 }
+
+.upgrade-row{
+  border: 2px dashed rgb(246, 196, 33);
+  background-color: rgb(65, 100, 128);
+  user-select: none;
+  cursor: pointer;
+}
+
+.moon{
+  user-select: none;
+  cursor: pointer;
+}
