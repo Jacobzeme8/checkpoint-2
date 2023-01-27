@@ -62,7 +62,7 @@ function drawUpgrades(){
   let manualUpgradesElem = document.getElementById("manual-upgrades")
   let manualUpgradesTemplate = ` `
   manualUpgrades.forEach(upgrade => manualUpgradesTemplate+=`
-  <div onclick="buyUpgrade('${upgrade.name}')" class="row d-flex align-items-center p-3 upgrade-row">
+  <div onclick="buyUpgrade('${upgrade.name}')" class="row d-flex align-items-center p-3 upgrade-row text-yellow">
               <div class="col-4 text-center"><span class="mdi ${upgrade.icon} fs-3"><span class="fs-5">${upgrade.name}</span></span></div>
               <div class="col-4 text-center">Cheese: ${upgrade.price}</div>
               <div class="col-4">+${upgrade.value} per Click</div>
@@ -74,7 +74,7 @@ function drawUpgrades(){
   let autoUpgradesElem = document.getElementById("auto-upgrades")
   let autoUpgradesTemplate = ` `
   autoUpgrades.forEach(upgrade => autoUpgradesTemplate += `
-  <div onclick="buyUpgrade('${upgrade.name}')" class="row d-flex align-items-center p-3 upgrade-row">
+  <div onclick="buyUpgrade('${upgrade.name}')" class="row d-flex align-items-center p-3 upgrade-row text-yellow">
               <div class="col-4 text-center"><span class="mdi ${upgrade.icon} fs-3"><span class="fs-5">${upgrade.name}</span></span></div>
               <div class="col-4 text-center">Cheese: ${upgrade.price}</div>
               <div class="col-4">+${upgrade.value} per Click</div>

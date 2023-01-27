@@ -18,6 +18,12 @@
   background-color: rgb(65, 100, 128);
 }
 
+.bg-stars{
+  background-image: url(https://i.ytimg.com/vi/neCMRoyED4I/maxresdefault.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
 .upgrade-row{
   border: 2px dashed rgb(246, 196, 33);
   background-color: rgb(65, 100, 128);
@@ -28,4 +34,14 @@
 .moon{
   user-select: none;
   cursor: pointer;
+}
+
+.upgrade-row:hover{
+  background-color:  rgb(246, 196, 33);
+  color:rgb(65, 100, 128) ;
+  transition-duration: .25s;
+}
+
+.text-yellow{
+  color: rgb(246, 196, 33);
 }
