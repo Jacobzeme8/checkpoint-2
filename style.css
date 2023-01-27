@@ -13,3 +13,7 @@
 .border-yellow{
   border: 2px dashed rgb(246, 196, 33);
 }
+
+.bg-dark-steel{
+  background-color: rgb(65, 100, 128);
+}
