@@ -57,37 +57,25 @@ function drawCheese(){
   cheeseElem.innerText = cheese
 }
 
+
 function drawUpgrades(){
   let autoUpgradesElem = document.getElementById("auto-upgrades")
   let manualUpgradesElem = document.getElementById("manual-upgrades")
-  let manualTemplate = ""
-  let  autoTemplate = ''
-  upgrades.forEach(u => {
-    if(u.type == 'manual'){
-      manualTemplate += `<div onclick="buyUpgrade('${u.name}')" class="row d-flex align-items-center p-3 upgrade-row text-yellow">
-      <div class="col-4 text-center"><span class="mdi ${u.icon} fs-3"><span class="fs-5">${u.name}</span></span></div>
-      <div class="col-4 text-center">Cheese: ${u.price}</div>
-      <div class="col-4">+${u.value} per Click</div>
-    </div>`
-
-    }
-    else{
-      autoTemplate += `<div onclick="buyUpgrade('${u.name}')" class="row d-flex align-items-center p-3 upgrade-row text-yellow">
-      <div class="col-4 text-center"><span class="mdi ${u.icon} fs-3"><span class="fs-5">${u.name}</span></span></div>
-      <div class="col-4 text-center">Cheese: ${u.price}</div>
-      <div class="col-4">+${u.value} per Click</div>
-    </div>`
-    }
+  let mUpgrades = upgrades.filter(u => u.type == "manual")
+  let aUpgrades = upgrades.filter(u => u.type == "auto")
+  let upgradeTemplate = ""
+  upgrades.forEach(u => {upgradeTemplate += `<div onclick="buyUpgrade('${u.name}')" class="row d-flex align-items-center p-3 upgrade-row text-yellow">
+    <div class="col-4 text-center"><span class="mdi ${u.icon} fs-3"><span class="fs-5">${u.name}</span></span></div>
+    <div class="col-4 text-center">Cheese: ${u.price}</div>
+    <div class="col-4">+${u.value} per Click</div>
+  </div>`
   
-
-    
+  if(u.type == "manual"){manualUpgradesElem.innerHTML = upgradeTemplate}
+  
+  else { autoUpgradesElem.innerHTML = upgradeTemplate;}
+    upgradeTemplate = ""
   
 })
-
-// @ts-ignore
-autoUpgradesElem.innerHTML = autoTemplate
-// @ts-ignore
-manualUpgradesElem.innerHTML = manualTemplate
 //   let manualUpgrades = upgrades.filter(upgrade => upgrade.type == "manual")
 //   let manualUpgradesElem = document.getElementById("manual-upgrades")
 //   let manualUpgradesTemplate = ` `
