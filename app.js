@@ -39,6 +39,7 @@ let upgrades = upgradesBackup;
 let cheese = 200;
 let manualClick = 1;
 let autoClick = 0;
+let numberOfTypes = 0;
 
 function moonClick(){
   cheese += manualClick;
@@ -58,48 +59,32 @@ function drawCheese(){
 }
 
 
-function drawUpgrades(){
-  let autoUpgradesElem = document.getElementById("auto-upgrades")
-  let manualUpgradesElem = document.getElementById("manual-upgrades")
-  let mUpgrades = upgrades.filter(u => u.type == "manual")
-  let aUpgrades = upgrades.filter(u => u.type == "auto")
-  let upgradeTemplate = ""
-  upgrades.forEach(u => {upgradeTemplate += `<div onclick="buyUpgrade('${u.name}')" class="row d-flex align-items-center p-3 upgrade-row text-yellow">
-    <div class="col-4 text-center"><span class="mdi ${u.icon} fs-3"><span class="fs-5">${u.name}</span></span></div>
-    <div class="col-4 text-center">Cheese: ${u.price}</div>
-    <div class="col-4">+${u.value} per Click</div>
-  </div>`
-  
-  if(u.type == "manual"){manualUpgradesElem.innerHTML = upgradeTemplate}
-  
-  else { autoUpgradesElem.innerHTML = upgradeTemplate;}
-    upgradeTemplate = ""
-  
-})
-//   let manualUpgrades = upgrades.filter(upgrade => upgrade.type == "manual")
-//   let manualUpgradesElem = document.getElementById("manual-upgrades")
-//   let manualUpgradesTemplate = ` `
-//   manualUpgrades.forEach(upgrade => manualUpgradesTemplate+=`
-  // <div onclick="buyUpgrade('${upgrade.name}')" class="row d-flex align-items-center p-3 upgrade-row text-yellow">
-  //             <div class="col-4 text-center"><span class="mdi ${upgrade.icon} fs-3"><span class="fs-5">${upgrade.name}</span></span></div>
-  //             <div class="col-4 text-center">Cheese: ${upgrade.price}</div>
-  //             <div class="col-4">+${upgrade.value} per Click</div>
-  //           </div>`
-            
-//             )
-            
-//   manualUpgradesElem.innerHTML = manualUpgradesTemplate
 
-//   let autoUpgrades = upgrades.filter(upgrade => upgrade.type == "auto")
-//   let autoUpgradesElem = document.getElementById("auto-upgrades")
-//   let autoUpgradesTemplate = ` `
-//   autoUpgrades.forEach(upgrade => autoUpgradesTemplate += `
-//   <div onclick="buyUpgrade('${upgrade.name}')" class="row d-flex align-items-center p-3 upgrade-row text-yellow">
-//               <div class="col-4 text-center"><span class="mdi ${upgrade.icon} fs-3"><span class="fs-5">${upgrade.name}</span></span></div>
-//               <div class="col-4 text-center">Cheese: ${upgrade.price}</div>
-//               <div class="col-4">+${upgrade.value} per Click</div>
-//             </div>`)
-//   autoUpgradesElem.innerHTML = autoUpgradesTemplate
+function drawUpgrades(){
+  let manualUpgrades = upgrades.filter(upgrade => upgrade.type == "manual")
+  let manualUpgradesElem = document.getElementById("manual-upgrades")
+  let manualUpgradesTemplate = ` `
+  manualUpgrades.forEach(upgrade => manualUpgradesTemplate+=`
+  <div onclick="buyUpgrade('${upgrade.name}')" class="row d-flex align-items-center p-3 upgrade-row text-yellow">
+              <div class="col-4 text-center"><span class="mdi ${upgrade.icon} fs-3"><span class="fs-5">${upgrade.name}</span></span></div>
+              <div class="col-4 text-center">Cheese: ${upgrade.price}</div>
+              <div class="col-4">+${upgrade.value} per Click</div>
+            </div>`
+            
+            )
+            
+  manualUpgradesElem.innerHTML = manualUpgradesTemplate
+
+  let autoUpgrades = upgrades.filter(upgrade => upgrade.type == "auto")
+  let autoUpgradesElem = document.getElementById("auto-upgrades")
+  let autoUpgradesTemplate = ` `
+  autoUpgrades.forEach(upgrade => autoUpgradesTemplate += `
+  <div onclick="buyUpgrade('${upgrade.name}')" class="row d-flex align-items-center p-3 upgrade-row text-yellow">
+              <div class="col-4 text-center"><span class="mdi ${upgrade.icon} fs-3"><span class="fs-5">${upgrade.name}</span></span></div>
+              <div class="col-4 text-center">Cheese: ${upgrade.price}</div>
+              <div class="col-4">+${upgrade.value} per Click</div>
+            </div>`)
+  autoUpgradesElem.innerHTML = autoUpgradesTemplate
 }
 
 function buyUpgrade(upgradeName){
