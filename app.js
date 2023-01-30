@@ -39,7 +39,6 @@ let upgrades = upgradesBackup;
 let cheese = 200;
 let manualClick = 1;
 let autoClick = 0;
-let numberOfTypes = 0;
 
 function moonClick(){
   cheese += manualClick;
